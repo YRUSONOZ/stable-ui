@@ -12,6 +12,8 @@ export default defineConfig({
         viteCompression({
             algorithm: "brotliCompress",
             verbose: true,
+            ext: ".br",
+            deleteOriginFile: false, // Ensures that original files are available
         }),
     ],
     resolve: {
@@ -19,5 +21,5 @@ export default defineConfig({
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
-    base: '/stable-ui/', // Update this base path
+    base: '/stable-ui/', // Keep the base path consistent
 });
