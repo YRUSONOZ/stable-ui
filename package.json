@@ -1,6 +1,7 @@
 {
   "name": "stable-viewer",
   "version": "0.0.0",
+  "homepage": "https://YRUSONOZ.github.io/stable-ui", // <-- Add this field
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
