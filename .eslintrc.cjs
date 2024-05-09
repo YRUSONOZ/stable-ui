@@ -1,3 +1,4 @@
+// .eslintrc.cjs
 /* eslint-env node */
 require("@rushstack/eslint-patch/modern-module-resolution");
 
@@ -10,8 +11,11 @@ module.exports = {
     ],
     parserOptions: {
         ecmaVersion: "latest",
+        sourceType: "module",
     },
     rules: {
         indent: ["error", 4],
+        "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+        "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     },
 };
