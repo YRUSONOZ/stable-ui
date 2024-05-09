@@ -13,7 +13,7 @@ export default defineConfig({
             algorithm: "brotliCompress",
             verbose: true,
             ext: ".br",
-            deleteOriginFile: false, // Ensures that original files are available
+            deleteOriginFile: false,
         }),
     ],
     resolve: {
@@ -21,5 +21,5 @@ export default defineConfig({
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
-    base: '/stable-ui/', // Keep the base path consistent
+    base: '/stable-ui/', // Correct base path
 });
