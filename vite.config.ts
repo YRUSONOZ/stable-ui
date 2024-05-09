@@ -1,11 +1,10 @@
+// vite.config.ts
 import { fileURLToPath, URL } from "node:url";
-
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import ElementPlus from 'unplugin-element-plus/vite';
 import viteCompression from 'vite-plugin-compression';
 
-// https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         vue(),
@@ -13,12 +12,12 @@ export default defineConfig({
         viteCompression({
             algorithm: "brotliCompress",
             verbose: true,
-        })
+        }),
     ],
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
-    base: '/stable-ui/'
+    base: '/', // Adjust this base path
 });
